@@ -1,0 +1,29 @@
+image: docker:stable
+
+variables:
+  LATEST_VER: angristan/ghost:latest
+  MAJOR_VER: angristan/ghost:2
+  MINOR_VER: angristan/ghost:2.1
+  PATCH_VER: angristan/ghost:2.1.1
+
+stages:
+  - Build image
+  - Push to Docker Hub
+
+docker build:
+  stage: Build image
+  script:
+  - docker info
+  - docker build -t $LATEST_VER -t $MAJOR_VER -t $MINOR_VER -t $PATCH_VER -t $REV_VER .
+
+docker push:
+  stage: Push to Docker Hub
+  only:
+  - master
+  script:
+  - echo "$REGISTRY_PASSWORD" | docker login -u "$REGISTRY_USER" --password-stdin
+  - docker push $LATEST_VER && docker image rm $LATEST_VER
+  - docker push $MAJOR_VER && docker image rm $MAJOR_VER
+  - docker push $MINOR_VER && docker image rm $MINOR_VER
+  - docker push $PATCH_VER && docker image rm $PATCH_VER
+  - docker push $REV_VER && docker image rm $REV_VER
