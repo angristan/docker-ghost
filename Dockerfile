@@ -12,7 +12,8 @@ RUN apk add --no-cache \
 ENV NODE_ENV production
 
 ENV GHOST_CLI_VERSION 1.9.3
-RUN npm install -g "ghost-cli@$GHOST_CLI_VERSION"
+RUN npm config set unsafe-perm true \
+		&& npm install -g "ghost-cli@$GHOST_CLI_VERSION"
 
 ENV GHOST_INSTALL /var/lib/ghost
 ENV GHOST_CONTENT /var/lib/ghost/content
