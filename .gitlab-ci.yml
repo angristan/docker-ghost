@@ -14,7 +14,7 @@ docker build:
   stage: Build image
   script:
   - docker info
-  - docker build -t $LATEST_VER -t $MAJOR_VER -t $MINOR_VER -t $PATCH_VER -t $REV_VER .
+  - docker build -t $LATEST_VER -t $MAJOR_VER -t $MINOR_VER -t $PATCH_VER .
 
 docker push:
   stage: Push to Docker Hub
@@ -26,4 +26,3 @@ docker push:
   - docker push $MAJOR_VER && docker image rm $MAJOR_VER
   - docker push $MINOR_VER && docker image rm $MINOR_VER
   - docker push $PATCH_VER && docker image rm $PATCH_VER
-  - docker push $REV_VER && docker image rm $REV_VER
