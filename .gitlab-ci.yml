@@ -4,7 +4,7 @@ variables:
   LATEST_VER: angristan/ghost:latest
   MAJOR_VER: angristan/ghost:2
   MINOR_VER: angristan/ghost:2.1
-  PATCH_VER: angristan/ghost:2.1.2
+  PATCH_VER: angristan/ghost:2.1.3
 
 stages:
   - Build image
