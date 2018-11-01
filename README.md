@@ -18,8 +18,8 @@ Besides manual updates, the images are automatically rebuilt every week to make 
 
 ### Build-time variables
 
-- **`GHOST_VERSION`**: Ghost version (`2.3.0`)
-- **`GHOST_CLI_VERSION`**: Ghost-CLI version (`1.9.6`)
+- **`GHOST_VERSION`**: Ghost version (`2.4.0`)
+- **`GHOST_CLI_VERSION`**: Ghost-CLI version (`1.9.7`)
 
 ### Volumes
 
