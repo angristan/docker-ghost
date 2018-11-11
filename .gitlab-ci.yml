@@ -3,8 +3,8 @@ image: docker:stable
 variables:
   LATEST_VER: angristan/ghost:latest
   MAJOR_VER: angristan/ghost:2
-  MINOR_VER: angristan/ghost:2.4
-  PATCH_VER: angristan/ghost:2.4.0
+  MINOR_VER: angristan/ghost:2.5
+  PATCH_VER: angristan/ghost:2.5.0
 
 stages:
   - Build image
