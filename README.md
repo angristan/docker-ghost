@@ -16,7 +16,7 @@ This image is automatically built by [GitLab CI](https://gitlab.com/angristan/do
 
 ### Build-time variables
 
-- **`GHOST_VERSION`**: Ghost version (`2.11.1`)
+- **`GHOST_VERSION`**: Ghost version (`2.12.0`)
 - **`GHOST_CLI_VERSION`**: Ghost-CLI version (`1.9.8`)
 
 ### Volumes

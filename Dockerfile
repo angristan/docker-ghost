@@ -18,7 +18,7 @@ RUN npm config set unsafe-perm true \
 ENV GHOST_INSTALL /var/lib/ghost
 ENV GHOST_CONTENT /var/lib/ghost/content
 
-ENV GHOST_VERSION 2.11.1
+ENV GHOST_VERSION 2.12.0
 
 RUN set -ex; \
 	mkdir -p "$GHOST_INSTALL"; \
