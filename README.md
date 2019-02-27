@@ -8,6 +8,8 @@
 
 This image is automatically built by [GitLab CI](https://gitlab.com/angristan/docker-ghost/pipelines) and pushed to the [Docker Hub](https://hub.docker.com/r/angristan/ghost/).
 
+**I won't update this image anymore. Feel free to fork the repo.**
+
 ## Features
 
 - Based on `node:8-alpine`
